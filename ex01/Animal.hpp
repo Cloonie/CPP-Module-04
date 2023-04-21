@@ -2,11 +2,13 @@
 #define ANIMAL_HPP
 
 #include <iostream>
+#include "Brain.hpp"
 
 class Animal
 {
 	protected:
 		std::string type;
+		Brain* _brain;
 	public:
 		Animal();
 		Animal(const Animal& copy);
@@ -14,6 +16,9 @@ class Animal
 		virtual ~Animal();
 		virtual void makeSound() const;
 		std::string getType() const;
+		Brain* getBrain();
+		void getIdeas(void);
+		void setIdea(int i, std::string idea);
 };
 
 #endif

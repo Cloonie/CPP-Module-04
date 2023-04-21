@@ -5,15 +5,15 @@
 
 class Brain
 {
-	protected:
+	private:
 		std::string _ideas[100];
 	public:
 		Brain();
 		Brain(const Brain& copy);
 		Brain& operator=(const Brain& assign);
 		~Brain();
-		void getIdeas();
-		void setIdeas(int i, std::string idea);
+		void getIdeas(void);
+		void setIdea(int i, std::string idea);
 };
 
 #endif
